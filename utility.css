@@ -1,0 +1,84 @@
+/* Utility File */
+
+/* Generic Helpers */
+.border{
+    border: 2px solid red;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+h2{
+    font-size: 0.9rem;
+}
+
+p{
+    font-size: 0.6rem;
+}
+
+/* Theme Variables */
+:root {
+    --a:0;
+    --t:200px;
+    --background-color1: black;
+    --text-color1: white;
+    --background-color2: #121212;
+    --background-color3: #1f1f1f;
+    --background-color-song: #1a1a1a;
+    --background-color-right: #1f1f1f63;
+    --card-color:#252525;
+}
+
+/* ==== WebKit Browsers (Chrome, Edge, Brave, Opera) ==== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0e0e0e;      /* dark track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b2b2b;      /* dark gray thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3a3a;      /* lighter on hover */
+}
+
+/* ==== Firefox ==== */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2b2b2b #0e0e0e;   /* thumb | track */
+}
+
+.pointer{
+    cursor: pointer;
+}

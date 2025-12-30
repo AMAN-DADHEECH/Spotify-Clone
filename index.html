@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- LEFT SECTION -->
+        <div class="left">
+
+            <!-- Close Icon -->
+            <div class="close">
+                <img src="/spotify/svg/close.svg" alt="close">
+            </div>
+
+            <!-- HOME BOX -->
+            <div class="home">
+                <div class="logo flex items-center list-style-none">
+                    <img src="/spotify/svg/logo.svg" alt="Logo">
+                    Spotify
+                </div>
+
+                <ul class="list-style-none">
+                    <li class="flex items-center">
+                        <img src="/spotify/svg/home.svg" alt="home">Home
+                    </li>
+                    <li class="flex items-center">
+                        <img src="/spotify/svg/search.svg" alt="search">Search
+                    </li>
+                </ul>
+            </div>
+
+            <!-- LIBRARY -->
+            <div class="library">
+
+                <ul class="heading flex justify-between list-style-none" style="padding: 9px 0 0;">
+                    <li class="flex items-center">
+                        <img src="/spotify/svg/library.svg" alt="library">Your Library
+                    </li>
+                    <li><img src="/spotify/svg/plus.svg" alt="plus"></li>
+                </ul>
+
+                <div class="songlist">
+                    <ul>
+                        <!-- <li>
+                            <img src="/spotify/svg/music.svg" alt="music">
+                            <div class="info">
+                                <div>song name</div>
+                                <div>song artist</div>
+                            </div>
+                            <span class="playnow"><span>Play Now</span>
+                            <img src="/spotify/svg/play-circle.svg" alt="play"></span>
+                        </li> -->
+                    </ul>
+                </div>
+
+                <!-- <ul class="playlist list-style-none">
+
+                    <!-- Create Playlist Box 
+                    <li>
+                        <ul class="create-playlist list-style-none">
+                            <li>Create your first playlist</li>
+                            <li>It's easy, we'll help you</li>
+                            <li class="btn1">Create playlist</li>
+                        </ul>
+                    </li>
+
+                    <!-- Browse Podcast Box 
+                    <li>
+                        <ul class="browse-podcast list-style-none">
+                            <li>Let's find some podcasts to follow</li>
+                            <li>We'll keep you updated on new episodes</li>
+                            <li class="btn1"><span>Browse podcasts</span></li>
+                        </ul>
+                    </li>
+
+                </ul> -->
+
+                <!-- LEFT FOOTER -->
+                <div class="footer">
+
+                    <div class="links">
+                        <a href="">Legal</a>
+                        <a href="">Safety & Privacy Center</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Cookies</a>
+                        <a href="">About Ads</a>
+                        <a href="">Accessibility</a>
+                        <a href="">Cookies</a>
+                    </div>
+
+                    <div class="lan">
+                        <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img" aria-hidden="true"
+                            class="e-91000-icon e-91000-baseline" viewBox="0 0 16 16"
+                            style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                            <path
+                                d="M8.152 16H8a8 8 0 1 1 .152 0m-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296M4.877 7.25c.062-1.771.34-3.386.773-4.624q.148-.427.329-.806a6.51 6.51 0 0 0-4.436 5.43zm-3.334 1.5a6.51 6.51 0 0 0 4.436 5.43 8 8 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129zm5.048 0c-.061 1.771-.339 3.386-.772 4.624q-.123.353-.268.674a6.5 6.5 0 0 0 4.071-5.298zm3.031-1.5a6.51 6.51 0 0 0-4.071-5.298q.145.322.268.674c.433 1.238.711 2.853.772 4.624z">
+                            </path>
+                        </svg>
+                        <span>English</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="right">
+            <div class="top flex justify-between aligns-center">
+                <ul class="right-top-right flex list-style-none">
+                    <div class="hamburger-container">
+                        <img class="hamburger" src="/spotify/svg/hamburger.svg" alt="hamburger">
+                        <li><img src="/spotify/svg/left-arrow.svg" alt="left"></li>
+                        <li><img src="/spotify/svg/right-arrow.svg" alt="right"></li>
+                    </div>
+                </ul>
+
+                <ul class="right-top-left flex list-style-none">
+                    <li class="btn2  btn-sm">Sign up</li>
+                    <li class="btn  btn-sm" style="filter: invert(1);">Log in</li>
+                </ul>
+            </div>
+
+
+            <div class="songs"> <!--Spotify Playlist Section -->
+                <ul class="list-style-none flex justify-between">
+                    <li class="pointer" style="font-size: 1.2rem;">Spotify Playlist</li>
+                    <li class="pointer" style="font-size: 0.8rem;">show all</li>
+                </ul>
+                <div class="song-list"> <!-- //cardContainer -->
+                    <!-- Songs will load here -->
+
+                </div>
+
+                <div class="playbar">   <!--//Playbar and Buttons -->
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="abovebar">
+                        <div class="songinfo"></div>
+                        <div class="songbuttons">
+                            <img id="previous" src="/spotify/svg/previous.svg" alt="Previous">
+                            <img id="play" src="/spotify/svg/play-circle.svg" alt="Play">
+                            <img id="next" src="/spotify/svg/next.svg" alt="next">
+                        </div>
+                        <div class="songtime"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
