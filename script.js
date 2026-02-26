@@ -1,16 +1,16 @@
 // script.js — Full working player (albums + sidebar + player)
 // Server assumptions:
-// - Album list available at: http://127.0.0.1:3000/spotify/music/
-// - Album folder URL pattern: http://127.0.0.1:3000/spotify/music/<album>/
-// - Album info.json (optional) at: /spotify/music/<album>/info.json
-// - Audio files accessible at: http://127.0.0.1:3000/spotify/music/<album>/<encoded-file>.mp3
+// - Album list available at: http://127.0.0.1:3000/music/
+// - Album folder URL pattern: http://127.0.0.1:3000/music/<album>/
+// - Album info.json (optional) at: /music/<album>/info.json
+// - Audio files accessible at: http://127.0.0.1:3000/music/<album>/<encoded-file>.mp3
 
 console.log("Spotify Clone Script Loaded (fresh rebuild)");
 
 // --- Globals ---
 const SERVER_BASE = "http://127.0.0.1:3000";
-const ALBUMS_DIR = `${SERVER_BASE}/spotify/music/`; // directory that lists albums
-const AUDIO_BASE_PATH = `${SERVER_BASE}/spotify/music/`; // used as base for audio src
+const ALBUMS_DIR = `${SERVER_BASE}/music/`; // directory that lists albums
+const AUDIO_BASE_PATH = `${SERVER_BASE}/music/`; // used as base for audio src
 
 let albums = [];               // array of album folder names (strings)
 let songs = [];                // array of { decoded, encoded } for current album
@@ -110,7 +110,7 @@ async function renderAlbumCards() {
           </g>
         </svg>
       </div>
-      <img src="/spotify/music/${encodeURIComponent(folder)}/cover.jpg" alt="${meta.title} cover" onerror="this.style.opacity=0.5;">
+      <img src="/music/${encodeURIComponent(folder)}/cover.jpg" alt="${meta.title} cover" onerror="this.style.opacity=0.5;">
       <h2>${escapeHtml(meta.title)}</h2>
       <p>${escapeHtml(meta.description)}</p>
     `;
@@ -190,13 +190,13 @@ function renderSongList() {
     li.className = "song-item";
     li.dataset.index = idx;
     li.innerHTML = `
-      <img src="/spotify/svg/music.svg" alt="music">
+      <img src="/svg/music.svg" alt="music">
       <div class="info">
         <div class="title">${escapeHtml(s.decoded)}</div>
         <div class="artist">Aman Dadheech</div>
       </div>
       <span class="playnow"><span>Play Now</span>
-        <img src="/spotify/svg/play-circle.svg" alt="play"></span>
+        <img src="/svg/play-circle.svg" alt="play"></span>
     `;
     li.addEventListener("click", () => {
       const i = Number(li.dataset.index);
@@ -263,11 +263,11 @@ function playPrev() {
 // Play button helpers
 function setPlayButtonPause() {
   const img = safeQuery(".songbuttons img[alt='Play'], .songbuttons img[alt='play']");
-  if (img && img.tagName === "IMG") img.src = "/spotify/svg/pause.svg";
+  if (img && img.tagName === "IMG") img.src = "/svg/pause.svg";
 }
 function setPlayButtonPlay() {
   const img = safeQuery(".songbuttons img[alt='Play'], .songbuttons img[alt='play']");
-  if (img && img.tagName === "IMG") img.src = "/spotify/svg/play-circle.svg";
+  if (img && img.tagName === "IMG") img.src = "/svg/play-circle.svg";
 }
 
 // --- Controls wiring ---
@@ -393,3 +393,4 @@ if (closeLeft) {
 boot().catch(err => console.error("Boot error:", err));
 
 /* End of script.js */
+
